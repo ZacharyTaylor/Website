@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Website::Application.config.secret_key_base = '7118a7a1d3550a058c78244d8c534be4e5a5084fd90833a77b921820d43b05b1134ac31b33ca67932cb0707b07d1a5acd91792c4ac9764c1b44f7a5684cc5011'
+Website::Application.config.secret_key_base = '19c1436b9f473616092658286bc71f4918758f36c16e3cb96a2ecdf9646af5672c63fa83f3bf45da9ebadc09e9e56f048fdfe496856ea9e6196a471eeae51b9f'
