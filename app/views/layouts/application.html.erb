@@ -11,6 +11,7 @@
   <body>
     <%= render 'layouts/header' %>
     <div class="container">
+      <% provide(:paper, { conference: "ICRA", title: "aoeu", abstract: "test eaoeusnhau " }) %>
       <%= render 'layouts/paper' %>
       <%= yield %>
     </div>
