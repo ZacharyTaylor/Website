@@ -4,8 +4,8 @@
         <img class="media-object" src="..." alt="...">
       </a>
       <div class="media-body">
-        <h4 class="media-heading">yield(:paper[:conference]): yeild(:paper[:title])</h4>
-        yield(:paper[:abstract])
+        <h4 class="media-heading"><%=yield(:paper[:conference])%>: <%=yeild(:paper[:title])%></h4>
+        <%=yield(:paper[:abstract])%>
       </div>
     </div>
 </div>
