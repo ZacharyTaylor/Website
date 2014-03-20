@@ -48,3 +48,6 @@ end
 #Heroku stuff
 ruby "2.1.1"
 gem 'rails_12factor', group: :production
+
+#Testing
+gem 'rspec-rails'

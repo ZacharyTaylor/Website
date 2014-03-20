@@ -1,11 +1,16 @@
+<% @papers = [] %>
+<% @papers << Paper.new("Test Paper", "ICRA2013", "aoeuaoeuaoeu", "ICRA2013.jpg") %>
+
+<% @papers.each do |paper| %>
 <div class="jumbotron">
     <div class="media">
       <a class="pull-left" href="#">
-        <img class="media-object" src="..." alt="...">
+        <img class="media-object" src= <%=paper.image%> alt=<%=paper.title%>>
       </a>
       <div class="media-body">
-        <h4 class="media-heading"><%=yield(:paper[:conference])%>: <%=yeild(:paper[:title])%></h4>
-        <%=yield(:paper[:abstract])%>
+        <h4 class="media-heading"><%=paper.conference%>: <%=paper.title%></h4>
+        <%=paper.abstract%>
       </div>
     </div>
 </div>
+<% end %>
