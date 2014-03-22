@@ -1,5 +1,6 @@
-<% @papers = [] %>
-<% @papers << Paper.new("Test Paper", "ICRA2013", "aoeuaoeuaoeu", "ICRA2013.jpg") %>
+<%require 'yaml'%>
+<%@papers = YAML.load_file('papers.yml')%>
+
 
 <% @papers.each do |paper| %>
 <div class="jumbotron">
