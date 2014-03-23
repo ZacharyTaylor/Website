@@ -3,8 +3,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -48,6 +52,11 @@ end
 #Heroku stuff
 ruby "2.1.1"
 gem 'rails_12factor', group: :production
+group :production do
+  gem 'thin'
+end
 
 #Testing
 gem 'rspec-rails'
+
+
