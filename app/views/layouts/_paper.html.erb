@@ -5,15 +5,13 @@
 
 <% @papers.each do |paper| %>
 <br>
-<div class="jumbotron">
     <div class="media">
       <a class="pull-left" href="#">
-        <img class="media-object" src= /assets/<%=paper.image%> width="250" alt=<%=paper.title%>>
+        <%= image_tag paper.image, width: "250", alt: paper.title, class: "media-object" %>
       </a>
       <div class="media-body">
         <h4 class="media-heading"><b><%=paper.conference%>:</b> <%= link_to paper.title, :controller => "welcome", :action => "download_pdf", :pdf => paper.file %></h4>
         <p align="justify"><%=paper.abstract%></p>
       </div>
     </div>
-</div>
 <% end %>
