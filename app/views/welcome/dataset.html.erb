@@ -1,0 +1,59 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Datasets</h1>
+    <p>Scans, images and hyperspectral data taken next to the ACFR building.</p>
+  </div>
+</div>
+
+<div class="container">
+<h2> Lidar scans with corresponding images </h2>
+<p> The lidar scans are stored in an ascii format with spaces as the delimiter, the first line gives the number of points in the scan. The remaining lines are formatted as X, Y, Z, return intensity. X, Y and Z are taken relative to the lidar with units of metres. Return intensity is an integer with value 0 to 255.
+
+Provided with each scan is an image of the same area collected by the hyperspectral camera. The image is created by taking the three bands of the hyperspectral camera closest to those a standard RGB camera uses.</p>
+
+<h4> Click on an image to download the lidar scan and photo</h4>
+
+<div class="panel panel-default">
+  <div class="panel-heading">ACFR Scans</div>
+  
+  <div class="panel-body text-center">
+    <%= link_to(:controller => "welcome", :action => "download_dataset", :dataset => "ACFR1.zip") do %>
+    <%= image_tag("Scan1.jpg", width: "1000") %>
+    <% end %>
+  </div>
+  
+  <div class="panel-body text-center">
+    <%= link_to(:controller => "welcome", :action => "download_dataset", :dataset => "ACFR2.zip") do %>
+    <%= image_tag("Scan2.jpg", width: "1000") %>
+    <% end %>
+  </div>
+  
+  <div class="panel-body text-center">
+    <%= link_to(:controller => "welcome", :action => "download_dataset", :dataset => "ACFR3.zip") do %>
+    <%= image_tag("Scan3.jpg", width: "1000") %>
+    <% end %>
+  </div>
+  
+  <div class="panel-body text-center">
+    <%= link_to(:controller => "welcome", :action => "download_dataset", :dataset => "ACFR4.zip") do %>
+    <%= image_tag("Scan4.jpg", width: "1000") %>
+    <% end %>
+  </div>
+</div>
+
+
+<h2> Hyperspetral bands </h2>
+<p>The hyperspectral camera offers over 300 bands in addition to the 3 standard RGB colours seen above. These bands range from 400nm up to around 2200nm. A selection of images showing the extremes of the cameras noise free bands are available for download by clicking on the image below. </p>
+
+<p>Due to web hosting restrictions I have not placed the full hyperspectral images for download on this site. If however you would like a copy of them give me an email and I will provide you with a link to my dropbox where you can download them.</p> 
+
+<div class="panel panel-default">
+  <div class="panel-heading">418, 950, 1010 and 2005 nm bands</div>
+  
+  <div class="panel-body text-center">
+    <%= link_to(:controller => "welcome", :action => "download_dataset", :dataset => "Hyperspectral bands.zip") do %>
+    <%= image_tag("Hyp.jpg", width: "1000") %>
+    <% end %>
+  </div>
+</div>
+</div>

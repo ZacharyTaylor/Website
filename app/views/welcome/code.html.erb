@@ -1,0 +1,42 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Source Code</h1>
+    <p>A set of C++, CUDA and Matlab functions for automatic alignment sensor alignment.</p>
+  </div>
+</div>
+
+<div class = "container">
+
+<h3>Multimodal-Calib</h3>
+<p>Multimodal-calib is a set of C++, CUDA and Matlab functions I have written during my thesis, for the automatic alignment and extrinsic calibration of different sensors. The main focus of this work has been for the use of panoramic cameras with Velodyne lidar. The methods developed however are not limited to this application and have been used for a range of multi-modal 2D-2D and 2D-3D registration tasks.
+ 
+<h3>Getting the Code</h3>
+<p>A zip of the latest stable version of the code with precompiled binaries is available <a href="https://github.com/ZacharyTaylor/Multimodal-Calib/zipball/Stable">here</a>.<br> 
+Alternatively you can visit <a href="https://github.com/ZacharyTaylor/Multimodal-Calib/">my Github page</a> for the latest code and more information.</p>
+ 
+<h3>Documentation</h3>
+<p>The m files all contain information on each function and how to run them with a few example scripts provided with the code. If you are interested in the C++ and CUDA that is running behind the scenes the Doxergen documentation can be found <a href="http://zacharytaylor.github.io/Multimodal-Calib/Doxygen/html/index.html">here</a>.</p>
+ 
+<h3>Requirements</h3>
+<p>This code makes use of CUDA to speed up the transformation and projection of point clouds. It also makes use of the loadlibrary function in Matlab. Because of this to run the code you will need:
+<ul>
+<li>A Nvidia GPU with compute capability of at least 1.2</li>
+<li>Matlab</li>
+<li>A C++ complier that is compatible with Matlab</li>
+</ul>
+</p>
+
+<h3>Current state of the code</h3>
+<p>The main function of the code has been to allow me to test ideas during my thesis. Because of this there has never been a strong focus on the readability, portability or use of the code by others. That being said recently due to some interest in the code I have made an effort to improve the approachability of the code so that others can use it. If you have tried to use the code and hit an issue please let me know so I can fix the code to prevent it happening to others.</p>
+ 
+<h3>Known bugs (will fix as soon as I get some time)</h3>
+<ul>
+<li>The Cmake file seems to never find Matlab automatically</li>
+<li>The SSD metric does not operate as expected</li>
+</ul>
+</p>
+ 
+
+<h3>Matlab interface</h3>
+<p>To allow quick changes to be made to the code for testing new ideas the main running of the code is done in Matlab. The preprocessing and other operations done before the optimization begins are written in pure Matlab. Once optimization begins due to the computational expense of transforming point clouds and calculating global metrics the code calls a dll that makes use of cuda to perform the calculations.</p>
+</div>
