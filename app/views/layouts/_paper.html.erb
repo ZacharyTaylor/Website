@@ -2,16 +2,17 @@
 <%require 'papers'%>
 <%@papers = YAML.load_file('app/assets/papers/papers.yml')%>
 
-
-<% @papers.each do |paper| %>
-<br>
-    <div class="media">
-      <a class="pull-left" href="#">
-        <%= image_tag paper.image, width: "250", alt: paper.title, class: "media-object" %>
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading"><b><%=paper.conference%>:</b> <%= link_to paper.title, :controller => "welcome", :action => "download_pdf", :pdf => paper.file %></h4>
-        <p align="justify"><%=paper.abstract%></p>
-      </div>
-    </div>
-<% end %>
+<div class="container">
+    <% @papers.each do |paper| %>
+    <br>
+        <div class="media">
+          <a class="pull-left">
+            <%= image_tag paper.image, width: "250", alt: paper.title, class: "media-object" %>
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading"><b><%=paper.conference%>:</b> <%= link_to paper.title, :controller => "welcome", :action => "download_pdf", :pdf => paper.file %></h4>
+            <p align="justify"><%=paper.abstract%></p>
+          </div>
+        </div>
+    <% end %>
+</div>

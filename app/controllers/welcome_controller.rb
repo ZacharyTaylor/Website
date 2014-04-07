@@ -9,4 +9,12 @@ def download_pdf
   )
 end
 
+def download_dataset
+  path = 'app/assets/datasets/' + params[:dataset]
+  send_file(
+    path,
+    filename: params[:dataset],
+  )
+end
+
 end

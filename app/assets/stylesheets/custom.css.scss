@@ -6,18 +6,71 @@
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
   line-height: 1;
+  color: white;
 }
 
 #logo:hover {
   text-decoration: none;
 }
 
+#ACFR_image {
+    float:left;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#USYD_image {
+    float:right;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer_text {
+    position: relative; 
+    top: 70px;
+    color: #324c9f;
+}
+
 body { padding-top: 40px; }
 @media screen and (max-width: 768px) {
     body { padding-top: 0px; }
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0px;
+}
+
+.navbar-inverse .navbar-inner {
+    background-image: linear-gradient(to bottom,#484848 0,#262626 100%);
+    border-color: none;
+    height: 45px;
+}
+
+.jumbotron {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+    background-color: #007c00;
+    background-image: linear-gradient(to bottom,#005500 0,#007c00 100%);
+    color: #f4f4f4;
+    
+}
+
+h1 {
+    color: white;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
 }
