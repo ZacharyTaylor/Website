@@ -59,4 +59,7 @@ end
 #Testing
 gem 'rspec-rails'
 
+#Monitoring
+gem 'newrelic_rpm'
+
 
