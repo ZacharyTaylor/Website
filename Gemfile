@@ -62,4 +62,7 @@ gem 'rspec-rails'
 #Monitoring
 gem 'newrelic_rpm'
 
+#Added for gallery
+gem 'fancybox2-rails'
+
 

@@ -30,44 +30,16 @@ Recently I have begun looking into the methods for calibrating mobile robotic sy
 <p> A few examples of my research and its applications is shown in the images below.</p><br><br>
 
 <div class="row">
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail">
-      <%= image_tag "KITTI.jpg", alt:"KITTI dataset image"%>
-      <div class="caption">
-        <h3>Velodyne-Camera Alignment</h3>
-        <p>This image was generated from the KITTI dataset and shows a camera image projected onto a velodyne scan after alignment using a mutual information technique.</p>
-      </div>
-    </div>
-  </div>
+    <%= render 'layouts/thumb', :thumb => "KITTI", :title => "Velodyne-Camera Alignment", 
+    :text => "This image was generated from the KITTI dataset and shows a camera image projected onto a velodyne scan after alignment using a mutual information technique." %>
   
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail">
-      <%= image_tag "almond_example.jpg", alt:"almond dataset image"%>
-      <div class="caption">
-        <h3>RGB-IR Image Alignment</h3>
-        <p>Two images of an almond tree were captured with an RGB and an IR camera. They were aligned using a gradient orientation measure and an overlay of the result is shown here.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail">
-      <%= image_tag "mine.jpg", alt:"mine image"%>
-      <div class="caption">
-        <h3>Lidar Image Generation</h3>
-        <p>An image generated from a lidar scan with no intensity information. The intensity in the image has been created from a mixture of the point normals and point density.</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail">
-      <%= image_tag "acfr_example.jpg", alt:"rigel image"%>
-      <div class="caption">
-        <h3>Rigel-Camera Alignment</h3>
-        <p>A coloured high res lidar scan of the ACFR building. Alignment was performed using a gradient orientation measure and a single scan-image pair.</p>
-      </div>
-    </div>
-  </div>
+      <%= render 'layouts/thumb', :thumb => "almond", :title => "RGB-IR Image Alignment", 
+    :text => "Two images of an almond tree were captured with an RGB and an IR camera. They were aligned using a gradient orientation measure and an overlay of the result is shown here." %>
+    
+        <%= render 'layouts/thumb', :thumb => "mine", :title => "Lidar Image Generation", 
+    :text => "An image generated from a lidar scan with no intensity information. The intensity in the image has been created from a mixture of the point normals and point density." %>
+    
+        <%= render 'layouts/thumb', :thumb => "acfr", :title => "Rigel-Camera Alignment", 
+    :text => "A coloured high res lidar scan of the ACFR building. Alignment was performed using a gradient orientation measure and a single scan-image pair." %>
 </div>
 </div>

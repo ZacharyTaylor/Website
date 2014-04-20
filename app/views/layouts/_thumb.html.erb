@@ -1,0 +1,14 @@
+<div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+        <%= link_to image_tag(thumb + "_thumb.jpg", alt: thumb), "#" + thumb, class: "fancybox" %>
+        <div style="display:none;">
+            <div id= <%=thumb%>>
+                <%=image_tag(thumb + ".jpg", alt: thumb)%>
+            </div>
+        </div>
+        <div class="caption">
+            <h3><%= title %></h3>
+            <p><%= text %></p>
+        </div>
+    </div>
+</div>

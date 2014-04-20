@@ -1,5 +1,11 @@
 ---
 - !ruby/object:Paper
+  title: Parameterless Automatic Extrinsic Calibration of Vehicle Mounted Lidar-Camera Systems
+  conference: ICRA 2014 LTA Workshop
+  abstract: This paper presents a new method for automated extrinsic calibration of multi-modal sensors. In particular the paper presents and evaluates a pipeline for calibration of 3D lidar and cameras mounted on a sensor vehicle. Previous methods for multi-modal sensor calibration find the optimal parameters by aligning a set of observations from the different sensor modalities. The main drawback of these methods is the need for a good initialisation in order to avoid converging into a local minima. Our approach eliminates this limitation by combining external observations with motion estimates obtained with the individual sensors. The method operates by utilizing structure from motion based hand-eye calibration to constrain the search space of the optimisation.
+  file: ICRA2014_LTA.pdf
+  image: ICRA2014_LTA.jpg
+- !ruby/object:Paper
   title: Multi-modal sensor calibration using a gradient orientation measure
   conference: JFR
   abstract: This paper presents a new metric for automated registration of multi-modal sensor data. The metric is based on the alignment of the orientation of gradients formed from the two candidate sensors. Data registration is performed by estimating the sensors’ extrinsic parameters that minimises the misalignment of the gradients. The metric can operate in a large range of applications working on both 2D and 3D sensor outputs and is suitable for both (i) single scan data registration and (ii) multi-sensor platform calibration using multiple scans. Unlike traditional calibration methods, it does not require markers or other registration aids to be placed in the scene. The effectiveness of the new method is demonstrated with experimental results on a variety of camera-lidar and camera-camera calibration problems. The novel metric is validated through comparisons with state of the art methods. Our approach is shown to give high quality registrations under all tested conditions.
