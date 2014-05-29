@@ -4,6 +4,7 @@ Website::Application.routes.draw do
     get "/publications" => 'welcome#publications'
     get "/datasets" => 'welcome#dataset'
     get "/code" => 'welcome#code'
+    get "/nonacademic" => 'welcome#nonacademic'
     
     get "welcome/download_pdf"
     get "welcome/download_dataset"
