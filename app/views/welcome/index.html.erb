@@ -16,9 +16,10 @@
 <%= image_tag "photo_of_me.jpg", width: "320", alt: "my photo", class: "media-object", style: "float: right;", Hspace: "60" %>
 <p> I created this website so others could easily find and make use of my research as well as the code I have written and datasets I have collected. The site is broken into the following sections:
 </p>
-<b> Publications: </b>  All the papers I have contributed to during the course of my PhD.<br><br>
-<b> Datasets: </b> Datasets I have collected that have been approved for public release. Currently this only contains one dataset of the ACFR gathered with a lidar and hyperspectral camera, however I hope to soon add an inferred camera dataset.<br><br>
-<b> Code: </b> A collection of Matlab, C++ and CUDA functions I have written for testing my alignment techniques as well as several of the most common techniques I have found in literature.<br><br>
+<b> <%= link_to 'Publications:','/publications' %> </b>  All the papers I have contributed to during the course of my PhD.<br><br>
+<b> <%= link_to 'Datasets:','/datasets' %> </b> Datasets I have collected that have been approved for public release. Currently this only contains one dataset of the ACFR gathered with a lidar and hyperspectral camera, however I hope to soon add an inferred camera dataset.<br><br>
+<b> <%= link_to 'Code:','/code' %> </b> A collection of Matlab, C++ and CUDA functions I have written for testing my alignment techniques as well as several of the most common techniques I have found in literature.<br><br>
+<b> <%= link_to 'Non-academic:','/nonacademic' %> </b> All the stuff I feel like sticking on the site that has nothing to do with my research.<br><br>
 </div>
 
 <div class ="container">
@@ -33,13 +34,13 @@ Recently I have begun looking into the methods for calibrating mobile robotic sy
     <%= render 'layouts/thumb', :thumb => "KITTI", :title => "Velodyne-Camera Alignment", 
     :text => "This image was generated from the KITTI dataset and shows a camera image projected onto a velodyne scan after alignment using a mutual information technique." %>
   
-      <%= render 'layouts/thumb', :thumb => "almond", :title => "RGB-IR Image Alignment", 
+    <%= render 'layouts/thumb', :thumb => "almond", :title => "RGB-IR Image Alignment", 
     :text => "Two images of an almond tree were captured with an RGB and an IR camera. They were aligned using a gradient orientation measure and an overlay of the result is shown here." %>
     
-        <%= render 'layouts/thumb', :thumb => "mine", :title => "Lidar Image Generation", 
+    <%= render 'layouts/thumb', :thumb => "mine", :title => "Lidar Image Generation", 
     :text => "An image generated from a lidar scan with no intensity information. The intensity in the image has been created from a mixture of the point normals and point density." %>
     
-        <%= render 'layouts/thumb', :thumb => "acfr", :title => "Rigel-Camera Alignment", 
+    <%= render 'layouts/thumb', :thumb => "acfr", :title => "Riegl-Camera Alignment", 
     :text => "A coloured high res lidar scan of the ACFR building. Alignment was performed using a gradient orientation measure and a single scan-image pair." %>
 </div>
 </div>

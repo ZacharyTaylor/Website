@@ -5,6 +5,7 @@ def download_pdf
   send_file(
     path,
     filename: params[:pdf],
+    disposition: 'inline',
     type: "application/pdf"
   )
 end

@@ -6,10 +6,10 @@
     <% @papers.each do |paper| %>
     <br>
         <div class="media">
-          <%= link_to image_tag(paper.image, width: "250", alt: paper.title, style: "float: left;", hspace: "10"), :controller => "welcome", :action => "download_pdf", :pdf => paper.file, class: "media-object" %>
+          <%= link_to image_tag(paper.image, width: "250", alt: paper.title, style: "float: left;", hspace: "10"), {:controller => "welcome", :action => "download_pdf", :pdf => paper.file, class: "media-object"}, :target => "_blank" %>
 
           <div class="media-body">
-            <h4 class="media-heading"><b><%=paper.conference%>:</b> <%= link_to paper.title, :controller => "welcome", :action => "download_pdf", :pdf => paper.file %></h4>
+            <h4 class="media-heading"><b><%=paper.conference%>:</b> <%= link_to paper.title, {:controller => "welcome", :target => '_blank', :action => "download_pdf", :pdf => paper.file}, :target => "_blank"%></h4>
             <p align="justify"><%=paper.abstract%></p>
           </div>
         </div>
