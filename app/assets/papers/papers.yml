@@ -5,6 +5,12 @@
   abstract: This paper presents a new method for automated extrinsic calibration of multi-modal sensors. In particular the paper presents and evaluates a pipeline for calibration of 3D lidar and cameras mounted on a sensor vehicle. Previous methods for multi-modal sensor calibration find the optimal parameters by aligning a set of observations from the different sensor modalities. The main drawback of these methods is the need for a good initialisation in order to avoid converging into a local minima. Our approach eliminates this limitation by combining external observations with motion estimates obtained with the individual sensors. The method operates by utilizing structure from motion based hand-eye calibration to constrain the search space of the optimisation.
   file: ICRA2014_LTA.pdf
   image: ICRA2014_LTA.jpg
+  - !ruby/object:Paper
+  title: Mapping clay minerals in an open-pit mine using hyperspectral imagery and automated feature extraction
+  conference: VGC 2014
+  abstract: The ability to map clay minerals on vertical geological surfaces is important from perspectives of stratigraphical mapping of geological units and safety. Clay minerals represent lines of stratigraphical weakness along which landslides can occur. To map clay minerals on complex geological surfaces we use a combination of hyperspectral and LiDAR data. These data are automatically registered to provide a map of the distribution of clay minerals and their abundances at different spatial scales.
+  file: VGC2014.pdf
+  image: VGC2014.jpg
 - !ruby/object:Paper
   title: Multi-modal sensor calibration using a gradient orientation measure
   conference: JFR
