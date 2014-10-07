@@ -1,10 +1,22 @@
 ---
 - !ruby/object:Paper
+  title: Motion-Based Calibration of Multimodal Sensor Arrays
+  conference: ICRA 2015 (Submitted awaiting response)
+  abstract: This paper formulates a new pipeline for automated extrinsic calibration of multi-sensor mobile platforms. The new method can operate on any combination of cameras, navigation sensors and 3D lidars. Current methods for extrinsic calibration are either based on special markers and/or chequerboards, or they require a precise parameters initialisation for the calibration to converge. These two limitations prevent them from being fully automatic. The method presented in this paper removes these restrictions. By combining information extracted from both, platform’s motion estimates and external observations, our approach eliminates the need for special markers and also removes the need for manual initialisation. A third advantage is that the motion-based automatic initialisation does not require overlapping field of view between sensors. The paper also provides a method to estimate the accuracy of the resulting calibration. We illustrate the generalisation of our approach and validate its performance by showing results with two contrasting datasets. The first dataset was collected in a city with a car platform, and the second one was collected in a tree-crop farm with a Segway platform.
+  file: ICRA2015.pdf
+  image: ICRA2015.jpg
+- !ruby/object:Paper
   title: Parameterless Automatic Extrinsic Calibration of Vehicle Mounted Lidar-Camera Systems
   conference: ICRA 2014 LTA Workshop
   abstract: This paper presents a new method for automated extrinsic calibration of multi-modal sensors. In particular the paper presents and evaluates a pipeline for calibration of 3D lidar and cameras mounted on a sensor vehicle. Previous methods for multi-modal sensor calibration find the optimal parameters by aligning a set of observations from the different sensor modalities. The main drawback of these methods is the need for a good initialisation in order to avoid converging into a local minima. Our approach eliminates this limitation by combining external observations with motion estimates obtained with the individual sensors. The method operates by utilizing structure from motion based hand-eye calibration to constrain the search space of the optimisation.
   file: ICRA2014_LTA.pdf
   image: ICRA2014_LTA.jpg
+- !ruby/object:Paper
+  title: Gradient Based Multi-modal Sensor Calibration
+  conference: ICRA 2014 MEPC Workshop
+  abstract: This paper presents an evaluation of a new metric for registering two sensors of different modality. The metric operates by aligning gradients present in the two sensors’ outputs. This metric is used to find the parameters between the sensors that minimizes the misalignment of the gradients. The metric can be applied to a wide range of problems and has been successfully demonstrated on the extrinsic calibration of two different lidar-camera systems as well as the alignment of IR and RGB images. Unlike most of previous techniques, our method requires no markers to be placed in the scene and can operate on a single scan from each sensor.
+  file: ICRA2014_MEPC.pdf
+  image: ICRA2014_MEPC.jpg
   - !ruby/object:Paper
   title: Mapping clay minerals in an open-pit mine using hyperspectral imagery and automated feature extraction
   conference: VGC 2014
