@@ -51,7 +51,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 #Heroku stuff
-ruby "2.1.1"
+ruby "2.1.3"
 gem 'rails_12factor', group: :production
 group :production do
   gem 'thin'
