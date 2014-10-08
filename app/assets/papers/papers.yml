@@ -39,7 +39,7 @@
   title: Orchard Fruit Segmentation using Multi-spectral Feature Learning
   conference: IROS 2013
   abstract: This paper presents a multi-class image segmentation approach to automate fruit segmentation. A feature learning algorithm combined with a conditional random field is applied to multi-spectral image data. Current classification methods used in agriculture scenarios tend to use hand crafted application-based features. In contrast, our approach uses unsupervised feature learning to automatically capture most relevant features from the data. This property makes our approach robust against variance in canopy trees and therefore has the potential to be applied to different domains. The proposed algorithm is applied to a fruit segmentation problem for a robotic agricultural surveillance mission, aiming to provide yield estimation with high accuracy and robustness against fruit variance. Experimental results with data collected in an almond farm are shown. The segmentation is performed with features extracted from multi-spectral (colour and infrared) data. We achieve a global classification accuracy of 88%.
-  file: IROS2013_2.jpg
+  file: IROS2013_2.pdf
   image: IROS2013_2.jpg
 - !ruby/object:Paper
   title: A Mutual Information Approach to Automatic Calibration of Camera and Lidar in Natural Environments
