@@ -51,8 +51,8 @@ body { padding-top: 40px; }
 }
 
 .jumbotron {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-size: 20px;
     text-align: left;
     position: relative;
@@ -60,6 +60,46 @@ body { padding-top: 40px; }
     background-image: linear-gradient(to bottom,#005500 0,#007c00 100%);
     color: #f4f4f4;
     
+}
+
+#bg-index {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.7)
+    ), image-url('index_title_image.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #0b6597;
+}
+
+#bg-pub {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.7)
+    ), image-url('pub_title_image.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #0b6597;
+}
+
+#bg-dataset {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.5)
+    ), image-url('dataset_title_image.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #000000;
+}
+
+#bg-code {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.7)
+    ), image-url('code_title_image.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #000000;
 }
 
 h1 {
