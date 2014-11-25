@@ -1,7 +1,7 @@
 <div id="bg-code" class="jumbotron">
   <div class="container">
     <h1>Source Code</h1>
-    <p>A set of C++, CUDA and Matlab functions for automatic alignment sensor alignment.</p>
+    <p>C++, CUDA and Matlab functions for automatic alignment sensor alignment.</p>
   </div>
 </div>
 
@@ -11,18 +11,25 @@
 <h2>Projects</h2>
 </div>
 
-I currently have three projects dealing with image alignment that have publicly available code
+I currently have four projects dealing with image alignment that have publicly available code
 
 <div class="page-header">
-    <h3><a href = "https://github.com/ZacharyTaylor/motion-based-calibration">Motion Based Calibration</a></h3>
+    <h3><a href = "https://github.com/ZacharyTaylor/ICRA2015-Calibration-Code">Motion Based Calibration</a></h3>
 </div>
-<p>The latest project I have been working on. This code utilizes structure from motion in combination with the Levinson method to calibrate a Velodyne-Camera system with no initial estimates to the extrinsic parameters required. For more details see my ICRA2014 long term autonomy workshop paper in the publications section.<p>
+<p>My latest project, this code utilizes the motion of sensors in combination with their output to calibrate a system with no initial estimates to the extrinsic parameters required. The code works for cameras, IMU and 3D lidar sensors and in addition to providing the calibration gives an estimate of the uncertainty of the values obtained. For more details see my ICRA 2015 paper in the publications section.<p>
 <p>Note this code makes use of Matlab and Cuda, because of this it requires a computer with an Nvidia graphics card with compute 2.0 or higher.<p>
 
+
 <div class="page-header">
-    <h3><a href = "https://github.com/ZacharyTaylor/Registration-functions">General Registration Functions</a></h3>
+    <h3><a href = "https://github.com/ZacharyTaylor/motion-based-calibration">Pairwise Motion Based Calibration</a></h3>
 </div>
-<p>A set of a couple of generic registration functions I have written in Matlab. The main purpose of these functions has been to assist others in similar fields to quickly implement and test ideas. Currently it contains fast implementations of entropy, mutual information and Fourier Mellin transforms.<p>
+<p>Note this code represents a rough first go at the above Motion Based Calibration code and is only here for completeness. This code utilizes structure from motion in combination with the Levinson method to calibrate a Velodyne-Camera system. For more details see my ICRA2014 long term autonomy workshop paper in the publications section.<p>
+
+<div class="page-header">
+    <h3><a href = "http://www.mathworks.com/matlabcentral/fileexchange/authors/377690">General Matlab Functions</a></h3>
+</div>
+<p>A set of a couple of the more useful functions I have written in Matlab. Currently contains an efficient normals calculation method and a method for generating images from point clouds<p>
+<p>This code has had a strong focus on efficiency, readability and ease of use.<p>
 
 <div class="page-header">
     <h3><a href="https://github.com/ZacharyTaylor/Multimodal-Calib/">Multimodal-Calib</a></h3>
