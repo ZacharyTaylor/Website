@@ -1,0 +1,75 @@
+<div id="bg-arm" class="jumbotron">
+  <div class="container">
+    <h1>Robotic Arm Calibration</h1>
+    <p>Matlab toolbox for quickly calibrating a camera to work with a robotic arm.</p>
+  </div>
+</div>
+
+<div class = "container">
+
+<div class="page-header">
+<h2>Camera to Arm Calibration</h2>
+</div>
+
+<p>A method for quickly finding the transformation from a camera to a robotic arm as well as the cameras intrinsics.</p>
+
+<p>The method operates by finding the parameters that minimize the difference in the position of the checkerboard given by the camera and arm when it is projected into the cameras coordinate system.</p>
+ 
+<p> <%= image_tag("arm.jpg", alt: "Arm Calibration", width: "500", align: "middle") %></p>
+ 
+ <p>Image of the robotic arm with mounted chessboard taken during calibration of the camera.</p>
+ 
+<div class="page-header">
+<h3><a href = "https://github.com/ZacharyTaylor/Camera-to-Arm-Calibration">Download Code</a></h3>
+</div>
+<p> For a quick example of how the method works look at the example data and run Demo.m </p>
+
+<div class="page-header">
+<h3><%= link_to "Technical Report", {:controller => "welcome", :target => '_blank', :action => "download_pdf", :pdf => "Arm Calibration.pdf"}, :target => "_blank"%></h4>
+</div>
+<p> This short report provides a overview of the methodology used to create the calibration toolbox </p>
+ 
+<div class="page-header">
+<h3>Calibration guide</h3>
+</div>
+<p>1) <a href = "https://github.com/ZacharyTaylor/Camera-to-Arm-Calibration">Download the Code</a></p>
+
+<p>2) Obtain a checkerboard, Matlab can generate one by running</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    I = checkerboard(200,10,7); I = I(1:size(I,1)/2,1:size(I,2)/2); imsave(imshow(I));
+  </div>
+</div>
+	
+<p>3) Rigidly mount the checkerboard to the robots end effector</p>
+
+<p>4) Move the robotic arm into a new pose where the entire checkerboard can be seen from the camera</p>
+
+<p>5) Capture the camera image and record the arm base to end effector transformation.</p>
+
+<p>6) Repeat steps 4-5 at least 10 times (20+ times is recommended)</p>
+
+<p>7) Run the calibration code</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    [TBase, TEnd, cameraParams] = CalCamArm(imageFolder, armMat, squareSize)<br><br>
+    
+		imageFolder- folder containing images<br>
+		armMat- matrix holding arm base to end effector transformations<br>
+		squareSize- width of a square on the chessboard in mm<br>
+		TBase- 4x4 camera to arm base transformation matrix, distances in m<br>
+		TEnd- 4x4 arm base to end effector transformation matrix, distances in m<br>
+		cameraParams- camera parameters object containing distortions and camera matrix
+  </div>
+</div>
+	
+<p>8) The Calibration should be complete. For more details and optional inputs / outputs run
+<div class="panel panel-default">
+  <div class="panel-body">
+    help CalCamArm
+  </div>
+</div>
+
+<p>Any issues / comments / ideas / etc give me an email</p>
+
+</div>
