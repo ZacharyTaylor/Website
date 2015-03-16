@@ -5,7 +5,7 @@ Website::Application.routes.draw do
     get "/datasets" => 'welcome#dataset'
     get "/code" => 'welcome#code'
     get "/arm-cal" => 'welcome#arm'
-    get "/nonacademic" => 'welcome#nonacademic'
+    get "/videos" => 'welcome#videos'
     
     get "welcome/download_pdf"
     get "welcome/download_dataset"
